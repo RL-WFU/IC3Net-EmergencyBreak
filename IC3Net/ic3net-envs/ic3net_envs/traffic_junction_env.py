@@ -631,7 +631,8 @@ class TrafficJunctionEnv(gym.Env):
 
 
         # Forced Emergency break of first car for simulation
-        # Self.b is randomly generated at each reset. This causes the first car to break at timestep b for 10 timesteps
+        # Self.b is randomly generated at each reset. 
+        # This causes the first car to break at timestep b for 11 timesteps
         # We can change the length of the break but to simulate and actual stop and to affect the other cars it needs to be longer than just one timestep
         if idx == 0 and self.counter >= self.b and self.counter <= (self.b + 10) and self.isFull:
             act = 0
